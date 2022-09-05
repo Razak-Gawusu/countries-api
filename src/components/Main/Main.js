@@ -37,7 +37,7 @@ function Main(props) {
         <div className='container'>
             <div className='mainContent__form'>
                 <SearchCountry darkMode ={props.darkMode} searchInput={searchInput} searchCountries={searchCountries} />
-                <FilterRegion /> 
+                <FilterRegion setCountries={setCountries} /> 
             </div>
             <div className='country__info--wrapper'>
               {searchInput.length > 0 ? filtered.map(country => {
