@@ -1,0 +1,29 @@
+@import 'variables';
+
+@mixin flexDiv ($direction:row, $justify:flex-start, $align:flex-start, $gap:1rem) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@function getWeight ($weight-name) {
+    @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+@mixin media-md {
+    @media screen and (min-width: 40rem) {
+        @content;
+    }
+}
+@mixin media-lg {
+    @media screen and (min-width: 60rem) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media screen and (min-width: 90rem) {
+        @content;
+    }
+}

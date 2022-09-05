@@ -1,0 +1,105 @@
+@import 'header';
+@import 'resets';
+@import 'searchCountry';
+@import 'filterRegion';
+@import 'config';
+@import 'countryInfo';
+@import 'responsive';
+@import 'singleCountry';
+
+.container{
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+
+.dark{
+    background-color: $darkBlue !important;
+    color: $white !important;
+}
+
+.darkMain{
+    background-color: $darkModeBackground !important;
+    color: $white !important;
+    .country__search{
+        background-color: $darkBlue !important;
+        color: $white !important;
+        &:focus{
+            border: solid .25rem $white; 
+        }
+    }
+
+    .darkSearch{
+        color: $white !important;
+    }
+
+    ::placeholder{
+        color: $white !important;
+        opacity: 1;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: getWeight(regular);
+    }
+
+    .filterRegion__dropdown--btn{
+        background-color: $darkBlue;
+        color: $white;
+    }
+
+    .filterRegion__dropdown--content{
+        background-color: $darkBlue;
+    }
+
+    .dropdown--link{
+        color: $white;
+        &:hover{
+            background-color: $darkModeBackground !important;
+        }   
+    }
+
+    .single-country__link{    
+        background-color: $darkBlue !important;
+        color: $white !important;
+    }
+
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.mainContent{
+    padding: 4rem 0;
+    background-color: $lightModeBackground;
+    min-height: 100vh;
+}
+
+
+// spinner
+@keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+  }
+
+  .spin::before {
+    animation: 1.5s linear infinite spinner;
+    animation-play-state: inherit;
+    border: solid 5px #cfd0d1;
+    border-bottom-color: #1c87c9;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: transform;
+  }
+//font-family: 'Nunito Sans', sans-serif;

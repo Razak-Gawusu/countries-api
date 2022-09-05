@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'config';
+
+.header--wrapper{
+    box-shadow: 0px 3px 7px -5px rgba(0,0,0,0.25);
+    background-color: $white;
+}
+
+.header{
+    @include flexDiv(row, space-between, center);
+    padding: 2rem 0;
+    #{&}__name{
+        font-size: 2rem;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: getWeight(bolder);
+        color: $lightModeText;
+    }
+
+    &__toggle--darkMode{
+        @include flexDiv(row, flex-start, center);
+        cursor: pointer;
+        &__image{
+            width: 2rem;
+        }
+
+        &__text{
+            font-size: 1.5rem;
+            font-weight: getWeight(bold);
+            color: $lightModeText;
+        }
+    }
+}

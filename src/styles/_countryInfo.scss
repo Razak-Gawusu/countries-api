@@ -1,0 +1,54 @@
+@import 'variables';
+@import 'config';
+
+.country__info--wrapper{
+    @include flexDiv(column, center, center, 5rem);
+}
+
+.country__info{
+    @include flexDiv(column, space-between);
+    width: 20rem;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: $white;
+    color: $lightModeText;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.25);
+    &:hover{
+        transform: scale(1.1);
+        transition: transform .25s cubic-bezier(.17,.67,.83,.67);
+    }
+    #{&}--img{
+        display: block;
+        max-width: 100%;
+    }
+
+    #{&}--details{
+        padding: 2rem;
+
+        &--name{
+            font-weight: getWeight('bolder');
+            margin: 1rem 0;
+            font-size: 1.8rem;
+        }
+
+        &--content{
+            font-size: 1.4rem;
+            font-weight: getWeight('regular');
+            margin: .5rem 0;
+
+            span{
+                font-weight: getWeight('bold');
+            }
+        }
+    }
+}
+
+.darkMain{
+    .country__info{
+        background-color: $darkBlue !important;
+        color: $white !important;
+    }
+}

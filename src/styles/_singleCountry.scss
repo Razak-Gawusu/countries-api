@@ -1,0 +1,57 @@
+@import 'variables';
+@import 'config';
+
+.single-country__wrapper{
+    background-color: $lightModeBackground;
+    padding: 5rem 0;
+    min-height: 100vh;
+    .single-country__link{
+        @include flexDiv(row, center, center, .5rem);
+        padding: .5rem 0;
+        width: 10rem;
+        box-shadow: 0px 3px 7px -2px rgba(0,0,0,0.25);
+        margin-bottom: 5rem;
+        background-color: $white;
+        img{
+            max-width: 100%;
+            color: $lightModeText;
+        }
+    
+        span{
+            font-size: 1.4rem;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: getWeight('regular');
+            text-decoration: none;
+        }
+    }
+}
+
+.single-country{
+    font-family: 'Nunito Sans', sans-serif;
+    color: $lightModeText;
+
+    img{
+        display: block;
+        margin-bottom: 4rem;
+    }
+
+    #{&}__info--details{
+        padding-bottom: 2rem;
+
+        &--name{
+            font-weight: getWeight('bolder');
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        &--content{
+            font-size: 1.4rem;
+            font-weight: getWeight('regular');
+            margin: .5rem 0;
+
+            span{
+                font-weight: getWeight('bold');
+            }
+        }
+    }
+}

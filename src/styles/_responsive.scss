@@ -1,0 +1,64 @@
+@import 'config';
+
+@include media-md{
+    .mainContent{
+        #{&}__form{
+            @include flexDiv(row, space-between, center);
+
+            .filterRegion__dropdown--btn{
+                width: 30rem;
+            }
+        }
+    }
+
+    .country{
+        #{&}__search{
+            min-width: 30rem;
+        }
+    }
+
+    .country__info--wrapper{
+        @include flexDiv(row, center, flex-start, 6.5rem);
+        flex-wrap: wrap;
+    }
+}
+
+@include media-lg{
+    .single-country{
+        @include flexDiv(row, space-between, center, 5rem);
+        &__info--top{
+            width: 47.5%;
+        }
+
+        &__info--down{
+            width: 47.5%;
+        }
+        &__info--details--wrap{
+            @include flexDiv(row, space-between, flex-start, 5rem)
+        }
+    }
+}
+
+
+@include media-xl{
+    .single-country{
+        @include flexDiv(row, space-between, center, 5rem);
+        &__info--top{
+            width: 47.5%;
+        }
+
+        &__info--down{
+            width: 47.5%;
+        }
+        &__info--details--wrap{
+            @include flexDiv(row, space-between, flex-start, 5rem)
+        }
+    }
+
+    .country{
+        #{&}__search{
+            min-width: 40rem;
+        }
+    }
+
+}
